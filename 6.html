@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre o Autor</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#ffffff;
+color:#222;
+line-height:1.8;
+}
+
+header img{
+width:100%;
+display:block;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:25px;
+}
+
+h1{
+text-align:center;
+color:#0d47a1;
+margin-bottom:20px;
+}
+
+h2{
+color:#0d47a1;
+margin-top:35px;
+margin-bottom:15px;
+}
+
+blockquote{
+background:#f5f7fa;
+border-left:5px solid #0d47a1;
+padding:15px;
+margin:20px 0;
+font-style:italic;
+}
+
+.destaque{
+background:#fff8e1;
+padding:18px;
+border-radius:10px;
+margin:20px 0;
+}
+
+.pergunta{
+margin-top:25px;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+textarea{
+width:100%;
+min-height:100px;
+padding:10px;
+border:1px solid #ccc;
+border-radius:8px;
+margin-top:10px;
+font-family:inherit;
+}
+
+input[type="radio"]{
+margin-right:8px;
+cursor:pointer;
+}
+
+label {
+cursor:pointer;
+display: inline-block;
+margin-bottom: 5px;
+}
+
+.btn{
+display:inline-block;
+background:#0d47a1;
+color:white;
+text-decoration:none;
+padding:15px 25px;
+border-radius:10px;
+font-weight:bold;
+margin-top:20px;
+border:none;
+cursor:pointer;
+font-size:16px;
+}
+
+.btn:hover{
+background:#1565c0;
+}
+
+.centralizar{
+text-align:center;
+}
+
+.autor{
+background:#f7f7f7;
+padding:20px;
+border-radius:12px;
+margin-top:30px;
+}
+
+footer{
+text-align:center;
+margin-top:40px;
+padding:20px;
+border-top:1px solid #ddd;
+color:#666;
+}
+
+ul {
+margin-left: 20px;
+margin-bottom: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<img src="autor.png" alt="Gilberto Moreira">
+</header>
+
+<div class="container">
+
+<h1>Sobre o Autor</h1>
+
+<div class="destaque">
+Antes de conhecer o autor, responda sinceramente às perguntas abaixo.<br>
+Não existem respostas certas ou erradas.<br>
+Apenas respostas honestas.
+</div>
+
+<h2>Questionário de Reflexão</h2>
+
+<div class="pergunta">
+1. Você sente verdadeiramente descansado ou apenas acostumado ao cansaço?
+</div>
+<label><input type="radio" name="q1" value="Sim"> Sim</label><br>
+<label><input type="radio" name="q1" value="Não"> Não</label>
+
+<div class="pergunta">
+2. Existe alguma sede interior que nada conseguiu satisfazer completamente?
+</div>
+<label><input type="radio" name="q2" value="Sim"> Sim</label><br>
+<label><input type="radio" name="q2" value="Não"> Não</label>
+
+<div class="pergunta">
+3. Você acredita que já encontrou aquilo que realmente alimenta sua alma?
+</div>
+<label><input type="radio" name="q3" value="Sim"> Sim</label><br>
+<label><input type="radio" name="q3" value="Não"> Não</label>
+
+<div class="pergunta">
+4. Existe alguma área da sua vida em que você sente que precisa se levantar novamente?
+</div>
+<label><input type="radio" name="q4" value="Sim"> Sim</label><br>
+<label><input type="radio" name="q4" value="Não"> Não</label>
+
+<div class="pergunta">
+5. Se hoje lhe pedissem a sua alma, você estaria preparado para encontrar-se com Deus?
+</div>
+<label><input type="radio" name="q5" value="Sim"> Sim</label><br>
+<label><input type="radio" name="q5" value="Não"> Não</label><br>
+<label><input type="radio" name="q5" value="Não sei"> Não sei</label>
+
+<div class="pergunta">
+6. O que mais chamou sua atenção nesta leitura?
+</div>
+<textarea id="q6_textarea"></textarea>
+
+<div class="pergunta">
+7. Você gostaria de conversar sobre algum dos temas apresentados?
+</div>
+<label><input type="radio" name="q7" value="Sim"> Sim</label><br>
+<label><input type="radio" name="q7" value="Não"> Não</label>
+
+<div class="pergunta">
+8. Você deseja fazer uma entrega genuína a Jesus Cristo?
+</div>
+<label>
+<input type="radio" name="entrega" value="Sim" onclick="mostrarRespostaFinal()"> Sim
+</label><br>
+<label>
+<input type="radio" name="entrega" value="Não" onclick="mostrarRespostaFinal()"> Não
+</label>
+
+<div id="respostaFinal"></div>
+
+<div class="destaque">
+Não se trata de proselitismo religioso.<br>
+Trata-se da preocupação de um amigo que há quase três décadas medita nas Escrituras Sagradas e que, diante da realidade dos nossos dias, tem procurado compartilhar a esperança encontrada em Cristo.
+<br><br>
+Como escreveu o apóstolo Paulo:
+</div>
+
+<blockquote>
+"Fiz-me tudo para com todos, para por todos os meios chegar a salvar alguns."
+<br><br>
+(BÍBLIA SAGRADA. 1 Coríntios 9:22.)
+</blockquote>
+
+<p>
+Se Deus utilizou estas páginas para tocar seu coração, ficarei honrado em conhecer seu testemunho.
+</p>
+
+<div class="centralizar">
+<button class="btn" onclick="enviarWhatsApp()">
+Enviar Respostas pelo WhatsApp
+</button>
+</div>
+
+<div class="autor">
+<h2>Gilberto Moreira</h2>
+<p>
+Gilberto Moreira é escritor, compositor e fundador da Escola Teológica AVANCE e do Seminário Teológico HAZAQ, dedicados ao ensino das Escrituras Sagradas com fidelidade bíblica, profundidade teológica e aplicação prática à vida cristã.
+</p>
+<p>
+Seu ministério tem como foco a formação de cristãos maduros, conscientes da doutrina bíblica e comprometidos com a verdade do Evangelho.
+</p>
+<p>
+É Criador e Sistematizador do Método Terapêutico: Sincroterapia.
+</p>
+<p>
+É autor do Ensaio Científico: Sincrologia.
+</p>
+<p>
+Também é Criador e Desenvolvedor das Calculadoras de Simulação e Medição Emocional e Comportamental.
+</p>
+<p>
+Criou e desenvolveu os aplicativos:
+</p>
+<ul>
+<li>Talmid Ivryt – Curso de Hebraico Bíblico Digital</li>
+<li>Luke – O Terapeuta Digital</li>
+</ul>
+<p>
+Ao longo de sua trajetória tem se dedicado à produção de materiais voltados ao discipulado cristão, educação teológica, reflexão bíblica e desenvolvimento humano fundamentado nas Escrituras.
+</p>
+</div>
+
+<div class="centralizar">
+<a href="index.html" class="btn">
+← Voltar ao Início
+</a>
+</div>
+
+</div>
+
+<footer>
+© AVANCE – Gilberto Moreira
+</footer>
+
+<script>
+
+function mostrarRespostaFinal(){
+
+const opcao = document.querySelector('input[name="entrega"]:checked');
+const destino = document.getElementById('respostaFinal');
+
+if(!opcao) return;
+
+if(opcao.value === "Sim"){
+
+destino.innerHTML = `
+<div class="destaque">
+Parabéns por sua decisão.<br>
+Recomendamos que você faça o Curso de Preparação para o Batismo nas Águas. E mais abaixo tem outro botão, clique em enviar o Questionário para o WhatsApp da AVANCE. 
+
+<br><br>
+
+<a class="btn"
+target="_blank"
+href="https://escolateologicavance-debug.github.io/Curso-Pr--Batismal/">
+Acessar Curso Pré-Batismal
+</a>
+
+</div>
+`;
+
+}else{
+
+destino.innerHTML = `
+<div class="destaque">
+
+Senhor, te agradeço por essa pessoa ter acessado o conteúdo deste aplicativo.
+
+Que uma Semente seja plantada e regada pelo Franco Jardineiro; o Espírito Divino de Deus.
+
+E que essa Semente germine.
+
+Cresça.
+
+E frutifique.
+
+Guarde essa pessoa.
+
+Seus sonhos.
+
+Sua família.
+
+Sua alma.
+
+Em Nome do Senhor Jesus.
+
+Amém.
+
+</div>
+`;
+
+}
+
+}
+
+function enviarWhatsApp(){
+
+let texto = "QUESTIONÁRIO Vinde a Mim\n\n";
+
+const q1 = document.querySelector('input[name="q1"]:checked')?.value || "Não respondido";
+texto += "1. Descansado ou apenas acostumado ao cansaço?\nResposta: " + q1 + "\n\n";
+
+const q2 = document.querySelector('input[name="q2"]:checked')?.value || "Não respondido";
+texto += "2. Existe sede interior?\nResposta: " + q2 + "\n\n";
+
+const q3 = document.querySelector('input[name="q3"]:checked')?.value || "Não respondido";
+texto += "3. Encontrou alimento para sua alma?\nResposta: " + q3 + "\n\n";
+
+const q4 = document.querySelector('input[name="q4"]:checked')?.value || "Não respondido";
+texto += "4. Precisa levantar-se novamente?\nResposta: " + q4 + "\n\n";
+
+const q5 = document.querySelector('input[name="q5"]:checked')?.value || "Não respondido";
+texto += "5. Está preparado para encontrar-se com Deus?\nResposta: " + q5 + "\n\n";
+
+const q6 = document.getElementById('q6_textarea').value || "Não respondido";
+texto += "6. O que mais chamou sua atenção?\nResposta: " + q6 + "\n\n";
+
+const q7 = document.querySelector('input[name="q7"]:checked')?.value || "Não respondido";
+texto += "7. Gostaria de conversar?\nResposta: " + q7 + "\n\n";
+
+const entrega = document.querySelector('input[name="entrega"]:checked')?.value || "Não respondido";
+texto += "8. Deseja fazer uma entrega genuína a Jesus?\nResposta: " + entrega;
+
+window.open(
+"https://wa.me/5566984666186?text=" + encodeURIComponent(texto),
+"_blank"
+);
+
+}
+
+</script>
+</body>
+</html>
