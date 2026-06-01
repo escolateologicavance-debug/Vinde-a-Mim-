@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d47a1">
+
+<title>Vinde a Mim</title>
+
+<link rel="manifest" href="manifest.json">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(to bottom, #f5f5f5, #e8f0ff);
+min-height:100vh;
+display:flex;
+flex-direction:column;
+color:#222;
+}
+
+.container{
+width:100%;
+max-width:700px;
+margin:auto;
+padding:20px;
+text-align:center;
+}
+
+.top-image{
+width:100%;
+max-width:350px;
+display:block;
+margin:15px auto 25px auto;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+h1{
+color:#0d47a1;
+margin-bottom:25px;
+font-size:2rem;
+}
+
+.menu{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.menu a{
+display:block;
+text-decoration:none;
+background:#0d47a1;
+color:#fff;
+padding:15px;
+border-radius:10px;
+font-size:1rem;
+font-weight:bold;
+transition:.2s;
+}
+
+.menu a:hover{
+background:#1565c0;
+transform:translateY(-2px);
+}
+
+.autor{
+margin-top:25px;
+}
+
+.autor a{
+display:block;
+text-decoration:none;
+background:#2e7d32;
+color:white;
+padding:15px;
+border-radius:10px;
+font-weight:bold;
+}
+
+footer{
+margin-top:35px;
+padding:20px;
+text-align:center;
+border-top:1px solid #ccc;
+font-size:.95rem;
+}
+
+footer a{
+display:block;
+margin:8px 0;
+text-decoration:none;
+color:#0d47a1;
+font-weight:bold;
+}
+
+.marca{
+margin-top:15px;
+font-weight:bold;
+}
+
+.brasil{
+margin-top:10px;
+font-size:1.2rem;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="img-1.png" alt="Vinde a Mim" class="top-image">
+
+<h1>VINDE A MIM</h1>
+
+<div class="menu">
+
+<a href="1.html">Vinde a Mim</a>
+
+<a href="2.html">Jesus Sacia a Sua Sede</a>
+
+<a href="3.html">Jesus Sacia a Sua Fome</a>
+
+<a href="4.html">Jesus te Levanta</a>
+
+<a href="5.html">Jesus te Garante a Eternidade</a>
+
+</div>
+
+<div class="autor">
+<a href="autor.html">Sobre o Autor</a>
+</div>
+
+</div>
+
+<footer>
+
+<a href="https://escolateologicavance-debug.github.io/Adora-o-Musical-/" target="_blank">
+Conheça minha Galeria Musical
+</a>
+
+<a href="https://escolateologicavance-debug.github.io/Cursos-Gerais-AVANCE-/" target="_blank">
+Conheça nossos Cursos
+</a>
+
+<div class="marca">
+Escola Teológica AVANCE
+</div>
+
+<div>
+Todos os Direitos Reservados
+</div>
+
+<div class="brasil">
+🇧🇷 BR
+</div>
+
+</footer>
+
+<script>
+if ('serviceWorker' in navigator) {
+window.addEventListener('load', () => {
+navigator.serviceWorker.register('sw.js')
+.catch(err => console.log(err));
+});
+}
+</script>
+
+</body>
+</html>
