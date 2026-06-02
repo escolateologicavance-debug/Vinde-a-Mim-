@@ -19,9 +19,12 @@ const urlsToCache = [
 "./img-6.png",
 
 "./autor.png",
+"./autor1.png",
 
 "./logo-192.png",
 "./logo-512.png",
+
+
 
 "./manifest.json"
 ];
